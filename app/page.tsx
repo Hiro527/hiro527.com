@@ -53,7 +53,14 @@ export default function Home() {
                         >
                             <Image src={HiroIconColorBG} alt="Hiro's icon" width={128} style={{ borderRadius: '50%' }}></Image>
                         </Box>
-                        <Typography>新しい時代のこころを映すタイプフェイスデザイン</Typography>
+                        <Typography
+                            sx={{
+                                fontFamily: 'hiragino-kaku-gothic-pron, sans-serif',
+                                fontWeight: 600,
+                            }}
+                        >
+                            新しい時代のこころを映すタイプフェイスデザイン
+                        </Typography>
                     </Box>
                 </Grid>
             </Grid>
