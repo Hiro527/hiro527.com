@@ -1,6 +1,8 @@
 'use client';
 
-import { Box, Grid, Typography } from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import XIcon from '@mui/icons-material/X';
+import { Box, Grid, IconButton, Typography } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -43,24 +45,56 @@ export default function Home() {
                             justifyContent: 'center',
                         }}
                     >
+                        {/* Icon */}
                         <Box
                             sx={{
                                 marginRight: {
                                     xs: 0,
                                     md: 5,
                                 },
+                                marginBottom: {
+                                    xs: 2,
+                                    md: 0,
+                                },
                             }}
                         >
-                            <Image src={HiroIconColorBG} alt="Hiro's icon" width={128} style={{ borderRadius: '50%' }}></Image>
+                            <Image src={HiroIconColorBG} alt="Hiro's icon" width={150} style={{ borderRadius: '50%' }}></Image>
                         </Box>
-                        <Typography
+                        {/* Main Contents */}
+                        <Box
                             sx={{
                                 fontFamily: 'hiragino-kaku-gothic-pron, sans-serif',
-                                fontWeight: 600,
                             }}
                         >
-                            新しい時代のこころを映すタイプフェイスデザイン
-                        </Typography>
+                            <Typography
+                                sx={{
+                                    fontWeight: 600,
+                                    fontSize: '30pt',
+                                }}
+                            >
+                                Hiro
+                            </Typography>
+                            {/* SNS Link */}
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                }}
+                            >
+                                <IconButton
+                                    href="https://x.com/hirx527"
+                                    rel="noreferrer noopener"
+                                    target="_blank"
+                                    sx={{
+                                        marginRight: 1,
+                                    }}
+                                >
+                                    <XIcon></XIcon>
+                                </IconButton>
+                                <IconButton href="https://github.com/Hiro527" rel="noreferrer noopener" target="_blank">
+                                    <GitHubIcon></GitHubIcon>
+                                </IconButton>
+                            </Box>
+                        </Box>
                     </Box>
                 </Grid>
             </Grid>
