@@ -4,6 +4,8 @@ import Script from 'next/script';
 
 import './globals.css';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
     title: 'Hiro',
     description: 'hiro527.com',

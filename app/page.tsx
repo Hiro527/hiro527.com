@@ -11,6 +11,8 @@ import Image from 'next/image';
 
 import HiroIconColorBG from '@/public/hiro_icon_colorbg.png';
 
+export const runtime = 'edge';
+
 export default function Home() {
     const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
