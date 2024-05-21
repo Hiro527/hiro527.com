@@ -1,4 +1,5 @@
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 
@@ -19,6 +20,8 @@ export default function RootLayout({
     return (
         <html lang="ja">
             <body>
+                {/* Google Analytics */}
+                <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
                 {/* Adobe Fonts */}
                 <Script
                     id="AdobeFonts"
