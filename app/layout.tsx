@@ -19,9 +19,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja">
+            {/* Google Analytics */}
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
             <body>
-                {/* Google Analytics */}
-                <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
                 {/* Adobe Fonts */}
                 <Script
                     id="AdobeFonts"
