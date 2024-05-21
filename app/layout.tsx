@@ -7,8 +7,8 @@ import './globals.css';
 export const runtime = 'edge';
 
 export const metadata: Metadata = {
-    title: 'Hiro',
-    description: 'hiro527.com',
+    title: 'hiro527.com',
+    description: 'About Hiro',
 };
 
 export default function RootLayout({
