@@ -70,7 +70,7 @@ export default function Home() {
                         >
                             <Typography
                                 sx={{
-                                    fontWeight: 600,
+                                    fontWeight: 900,
                                     fontSize: '30pt',
                                 }}
                             >
