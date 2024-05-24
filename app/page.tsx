@@ -63,14 +63,11 @@ export default function Home() {
                             <Image src={HiroIconColorBG} alt="Hiro's icon" width={150} style={{ borderRadius: '50%' }}></Image>
                         </Box>
                         {/* Main Contents */}
-                        <Box
-                            sx={{
-                                fontFamily: 'hiragino-kaku-gothic-pron, sans-serif',
-                            }}
-                        >
+                        <Box>
                             <Typography
                                 sx={{
-                                    fontWeight: 900,
+                                    fontFamily: 'hiragino-kaku-gothic-pron',
+                                    fontWeight: 600,
                                     fontSize: '30pt',
                                 }}
                             >
