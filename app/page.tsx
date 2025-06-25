@@ -1,26 +1,26 @@
-'use client';
+"use client"
 
-import GitHubIcon from '@mui/icons-material/GitHub';
-import XIcon from '@mui/icons-material/X';
-import { Box, Grid, IconButton, Typography } from '@mui/material';
-import CssBaseline from '@mui/material/CssBaseline';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import GitHubIcon from "@mui/icons-material/GitHub"
+import XIcon from "@mui/icons-material/X"
+import { Box, Grid, IconButton, Typography } from "@mui/material"
+import CssBaseline from "@mui/material/CssBaseline"
+import { createTheme, ThemeProvider } from "@mui/material/styles"
+import useMediaQuery from "@mui/material/useMediaQuery"
 
-import Image from 'next/image';
+import Image from "next/image"
 
-import HiroIconColorBG from '@/public/hiro_icon_colorbg.png';
+import HiroIconColorBG from "@/public/hiro_icon_colorbg.png"
 
-export const runtime = 'edge';
+export const runtime = "edge"
 
 export default function Home() {
-    const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+    const isDarkMode = useMediaQuery("(prefers-color-scheme: dark)")
 
     const theme = createTheme({
         palette: {
-            mode: isDarkMode ? 'dark' : 'light',
+            mode: isDarkMode ? "dark" : "light",
         },
-    });
+    })
 
     return (
         <ThemeProvider theme={theme}>
@@ -31,20 +31,20 @@ export default function Home() {
                 alignItems="center"
                 justifyContent="center"
                 sx={{
-                    width: '100vw',
-                    height: '100vh',
+                    width: "100vw",
+                    height: "100vh",
                 }}
             >
                 <Grid item xs={10} md={6}>
                     <Box
                         sx={{
-                            display: 'flex',
+                            display: "flex",
                             flexDirection: {
-                                xs: 'column',
-                                md: 'row',
+                                xs: "column",
+                                md: "row",
                             },
-                            alignItems: 'center',
-                            justifyContent: 'center',
+                            alignItems: "center",
+                            justifyContent: "center",
                         }}
                     >
                         {/* Icon */}
@@ -60,15 +60,20 @@ export default function Home() {
                                 },
                             }}
                         >
-                            <Image src={HiroIconColorBG} alt="Hiro's icon" width={150} style={{ borderRadius: '50%' }}></Image>
+                            <Image
+                                src={HiroIconColorBG}
+                                alt="Hiro's icon"
+                                width={150}
+                                style={{ borderRadius: "50%" }}
+                            ></Image>
                         </Box>
                         {/* Main Contents */}
                         <Box>
                             <Typography
                                 sx={{
-                                    fontFamily: 'hiragino-kaku-gothic-pron',
+                                    fontFamily: "hiragino-kaku-gothic-pron",
                                     fontWeight: 600,
-                                    fontSize: '30pt',
+                                    fontSize: "30pt",
                                 }}
                             >
                                 Hiro
@@ -76,7 +81,7 @@ export default function Home() {
                             {/* SNS Link */}
                             <Box
                                 sx={{
-                                    display: 'flex',
+                                    display: "flex",
                                 }}
                             >
                                 <IconButton
@@ -89,7 +94,11 @@ export default function Home() {
                                 >
                                     <XIcon></XIcon>
                                 </IconButton>
-                                <IconButton href="https://github.com/Hiro527" rel="noreferrer noopener" target="_blank">
+                                <IconButton
+                                    href="https://github.com/Hiro527"
+                                    rel="noreferrer noopener"
+                                    target="_blank"
+                                >
                                     <GitHubIcon></GitHubIcon>
                                 </IconButton>
                             </Box>
@@ -98,5 +107,5 @@ export default function Home() {
                 </Grid>
             </Grid>
         </ThemeProvider>
-    );
+    )
 }

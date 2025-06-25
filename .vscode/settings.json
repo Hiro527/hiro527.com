@@ -1,12 +1,12 @@
 {
-  "extensions.ignoreRecommendations": true,
-  "extensions.autoUpdate": false,
-  "extensions.autoCheckUpdates": false,
-  "extensions.showRecommendationsOnlyOnDemand": true,
-  "extensions.enabledApiProposals": {
-    "Google.gemini": true,
-    "biomejs.biome": true,
-    "github.copilot": false,
-    "esbenp.prettier-vscode": false
-  }
+    "extensions.ignoreRecommendations": true,
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+    "extensions.enabledApiProposals": {
+        "Google.gemini": true,
+        "biomejs.biome": true,
+        "github.copilot": false,
+        "esbenp.prettier-vscode": false
+    }
 }

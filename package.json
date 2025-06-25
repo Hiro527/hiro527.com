@@ -1,37 +1,41 @@
 {
-  "name": "hiro527.com",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "biome lint .",
-    "fix": "biome format --write ."
-  },
-  "dependencies": {
-    "@emotion/cache": "^11.11.0",
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.18",
-    "@mui/material": "^5.15.18",
-    "@mui/material-nextjs": "^5.15.11",
-    "@next/third-parties": "^14.3.0-canary.73",
-    "next": "14.2.3",
-    "react": "^18",
-    "react-dom": "^18",
-    "sharp": "^0.33.4"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.0.5",
-    "@cloudflare/next-on-pages": "^1.11.3",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3",
-    "lefthook": "^1.11.14",
-    "prettier": "^3.2.5",
-    "typescript": "^5"
-  }
+    "name": "hiro527.com",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "biome lint .",
+        "lint:format": "biome format --error-on-warnings .",
+        "lint:lint": "biome lint --error-on-warnings .",
+        "lint:check": "biome check --error-on-warnings .",
+        "fix:format": "biome format --write .",
+        "fix:lint": "biome lint --write ."
+    },
+    "dependencies": {
+        "@emotion/cache": "^11.11.0",
+        "@emotion/react": "^11.11.4",
+        "@emotion/styled": "^11.11.5",
+        "@mui/icons-material": "^5.15.18",
+        "@mui/material": "^5.15.18",
+        "@mui/material-nextjs": "^5.15.11",
+        "@next/third-parties": "^14.3.0-canary.73",
+        "next": "14.2.3",
+        "react": "^18",
+        "react-dom": "^18",
+        "sharp": "^0.33.4"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.0.5",
+        "@cloudflare/next-on-pages": "^1.11.3",
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "eslint": "^8",
+        "eslint-config-next": "14.2.3",
+        "lefthook": "^1.11.14",
+        "prettier": "^3.2.5",
+        "typescript": "^5"
+    }
 }

@@ -1,26 +1,26 @@
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import { GoogleAnalytics } from '@next/third-parties/google';
-import type { Metadata } from 'next';
-import Script from 'next/script';
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter"
+import { GoogleAnalytics } from "@next/third-parties/google"
+import type { Metadata } from "next"
+import Script from "next/script"
 
-import './globals.css';
+import "./globals.css"
 
-export const runtime = 'edge';
+export const runtime = "edge"
 
 export const metadata: Metadata = {
-    title: 'hiro527.com',
-    description: 'About Hiro',
-};
+    title: "hiro527.com",
+    description: "About Hiro",
+}
 
 export default function RootLayout({
     children,
 }: Readonly<{
-    children: React.ReactNode;
+    children: React.ReactNode
 }>) {
     return (
         <html lang="ja">
             {/* Google Analytics */}
-            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
             <body>
                 {/* Adobe Fonts */}
                 <Script
@@ -40,5 +40,5 @@ export default function RootLayout({
                 <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
             </body>
         </html>
-    );
+    )
 }
