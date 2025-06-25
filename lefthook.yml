@@ -1,0 +1,9 @@
+pre-commit:
+  commands:
+    fix:
+      run: npm run fix && git add {staged_files}
+
+pre-push:
+  commands:
+    lint:
+      run: npm run lint
