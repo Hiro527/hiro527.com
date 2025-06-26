@@ -1,111 +1,140 @@
-"use client"
+'use client';
 
-import GitHubIcon from "@mui/icons-material/GitHub"
-import XIcon from "@mui/icons-material/X"
-import { Box, Grid, IconButton, Typography } from "@mui/material"
-import CssBaseline from "@mui/material/CssBaseline"
-import { createTheme, ThemeProvider } from "@mui/material/styles"
-import useMediaQuery from "@mui/material/useMediaQuery"
+import GitHubIcon from '@mui/icons-material/GitHub';
+import XIcon from '@mui/icons-material/X';
+import { Box, IconButton, Link, Typography } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-import Image from "next/image"
+import Image from 'next/image';
 
-import HiroIconColorBG from "@/public/hiro_icon_colorbg.png"
+import HiroIconColorBG from '@/public/hiro_icon_colorbg.png';
 
-export const runtime = "edge"
+export const runtime = 'edge';
 
 export default function Home() {
-    const isDarkMode = useMediaQuery("(prefers-color-scheme: dark)")
+    const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
     const theme = createTheme({
         palette: {
-            mode: isDarkMode ? "dark" : "light",
+            mode: isDarkMode ? 'dark' : 'light',
         },
-    })
+        typography: {
+            allVariants: {
+                fontFamily: 'hiragino-kaku-gothic-pron, sans-serif',
+                fontWeight: 300,
+                fontStyle: 'normal',
+            },
+        },
+    });
 
     return (
         <ThemeProvider theme={theme}>
-            <CssBaseline></CssBaseline>
-            <Grid
-                container
-                spacing={2}
-                alignItems="center"
-                justifyContent="center"
+            <CssBaseline />
+            <Box
                 sx={{
-                    width: "100vw",
-                    height: "100vh",
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    minHeight: '100vh',
+                    width: '100vw',
+                    overflowX: 'hidden',
                 }}
             >
-                <Grid item xs={10} md={6}>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: {
+                            xs: 'column',
+                            md: 'row',
+                        },
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        maxWidth: 'md',
+                        width: '100%',
+                        padding: {
+                            xs: 2,
+                            md: 0,
+                        },
+                        boxSizing: 'border-box',
+                    }}
+                >
+                    {/* Icon */}
                     <Box
                         sx={{
-                            display: "flex",
-                            flexDirection: {
-                                xs: "column",
-                                md: "row",
+                            marginRight: {
+                                xs: 0,
+                                md: 5,
                             },
-                            alignItems: "center",
-                            justifyContent: "center",
+                            marginBottom: {
+                                xs: 2,
+                                md: 0,
+                            },
                         }}
                     >
-                        {/* Icon */}
-                        <Box
+                        <Image src={HiroIconColorBG} alt="Hiro's icon" width={150} style={{ borderRadius: '50%' }}></Image>
+                    </Box>
+                    {/* Main Contents */}
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: {
+                                xs: 'center',
+                                md: 'flex-start',
+                            },
+                        }}
+                    >
+                        <Typography
                             sx={{
-                                marginRight: {
-                                    xs: 0,
-                                    md: 5,
-                                },
-                                marginBottom: {
-                                    xs: 2,
-                                    md: 0,
-                                },
+                                fontWeight: 600,
+                                fontSize: '30pt',
                             }}
                         >
-                            <Image
-                                src={HiroIconColorBG}
-                                alt="Hiro's icon"
-                                width={150}
-                                style={{ borderRadius: "50%" }}
-                            ></Image>
-                        </Box>
-                        {/* Main Contents */}
-                        <Box>
-                            <Typography
+                            Hiro
+                        </Typography>
+                        <Typography>
+                            🎂 2004/05/27
+                            <br />
+                            📍 Tokyo
+                            <br />
+                            🏢{' '}
+                            <Link href="https://escl.co.jp" rel="noreferrer noopener" target="_blank">
+                                ESCL
+                            </Link>
+                            {' / '}
+                            <Link href="https://unlimit.games" rel="noreferrer noopener" target="_blank">
+                                FT UNLIMIT
+                            </Link>
+                            <br />
+                            💼 Software Engineer / Designer / Event Organizer
+                        </Typography>
+                        {/* SNS Link */}
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                my: 1,
+                            }}
+                        >
+                            <IconButton
+                                href="https://x.com/hirx527"
+                                rel="noreferrer noopener"
+                                target="_blank"
                                 sx={{
-                                    fontFamily: "hiragino-kaku-gothic-pron",
-                                    fontWeight: 600,
-                                    fontSize: "30pt",
+                                    marginRight: 1,
                                 }}
                             >
-                                Hiro
-                            </Typography>
-                            {/* SNS Link */}
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                }}
-                            >
-                                <IconButton
-                                    href="https://x.com/hirx527"
-                                    rel="noreferrer noopener"
-                                    target="_blank"
-                                    sx={{
-                                        marginRight: 1,
-                                    }}
-                                >
-                                    <XIcon></XIcon>
-                                </IconButton>
-                                <IconButton
-                                    href="https://github.com/Hiro527"
-                                    rel="noreferrer noopener"
-                                    target="_blank"
-                                >
-                                    <GitHubIcon></GitHubIcon>
-                                </IconButton>
-                            </Box>
+                                <XIcon></XIcon>
+                            </IconButton>
+                            <IconButton href="https://github.com/Hiro527" rel="noreferrer noopener" target="_blank">
+                                <GitHubIcon></GitHubIcon>
+                            </IconButton>
                         </Box>
                     </Box>
-                </Grid>
-            </Grid>
+                </Box>
+            </Box>
         </ThemeProvider>
-    )
+    );
 }
