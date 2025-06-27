@@ -1,5 +1,8 @@
 html {
     visibility: hidden;
+    width: 100svw;
+    height: 100svh;
+    overflow: hidden;
 }
 
 html.wf-active {
