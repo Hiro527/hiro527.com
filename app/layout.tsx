@@ -10,6 +10,15 @@ export const runtime = 'edge';
 export const metadata: Metadata = {
     title: 'hiro527.com',
     description: 'About Hiro',
+    openGraph: {
+        url: 'https://hiro527.com',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary',
+        site: '@hirx527',
+        creator: '@hirx527',
+    },
 };
 
 export default function RootLayout({
