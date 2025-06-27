@@ -1,7 +1,7 @@
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import XIcon from '@mui/icons-material/X';
-import { Box, IconButton, Link, Typography, Tooltip } from '@mui/material';
+import { Box, IconButton, Link, Tooltip, Typography } from '@mui/material';
 
 import Image from 'next/image';
 
@@ -89,7 +89,7 @@ export default function Home() {
                             FT UNLIMIT
                         </Link>
                         <br />
-                        💼 Software Engineer / Designer
+                        💼 System Engineer / Designer
                         <br />
                         💬 eスポーツ業界でお仕事してます
                     </Typography>
