@@ -3,6 +3,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 
+import Copyright from '@/components/Copyright';
 import './globals.css';
 
 export const runtime = 'edge';
@@ -13,17 +14,13 @@ export const metadata: Metadata = {
     openGraph: {
         url: 'https://hiro527.com',
         type: 'website',
-        images: [
-            'https://storage.hiro527.com/assets/hiro_icon_colorbg.png',
-        ],
+        images: ['https://storage.hiro527.com/assets/hiro_icon_colorbg.png'],
     },
     twitter: {
         card: 'summary',
         site: '@hirx527',
         creator: '@hirx527',
-        images: [
-            'https://storage.hiro527.com/assets/hiro_icon_colorbg.png',
-        ],
+        images: ['https://storage.hiro527.com/assets/hiro_icon_colorbg.png'],
     },
 };
 
@@ -52,7 +49,10 @@ export default function RootLayout({
                       })(document);`,
                     }}
                 />
-                <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+                <AppRouterCacheProvider>
+                    {children}
+                    <Copyright />
+                </AppRouterCacheProvider>
             </body>
         </html>
     );

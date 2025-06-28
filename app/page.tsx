@@ -6,7 +6,6 @@ import { Box, IconButton, Link, Tooltip, Typography } from '@mui/material';
 import Image from 'next/image';
 
 import HiroIconColorBG from '@/public/hiro_icon_colorbg.png';
-import Copyright from './components/Copyright';
 
 export const runtime = 'edge';
 
@@ -130,7 +129,6 @@ export default function Home() {
                     </Box>
                 </Box>
             </Box>
-            <Copyright />
         </Box>
     );
 }
