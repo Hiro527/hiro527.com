@@ -2,11 +2,10 @@
     "extensions.ignoreRecommendations": true,
     "extensions.autoUpdate": false,
     "extensions.autoCheckUpdates": false,
-    "extensions.showRecommendationsOnlyOnDemand": true,
-    "extensions.enabledApiProposals": {
-        "Google.gemini": true,
-        "biomejs.biome": true,
-        "github.copilot": false,
-        "esbenp.prettier-vscode": false
-    }
+    "biome.enabled": true,
+    "prettier.enable": false,
+    "github.copilot.enable": {
+        "*": false,
+    },
+    "geminicodeassist.enable": true
 }
