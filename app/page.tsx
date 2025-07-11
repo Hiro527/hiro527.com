@@ -53,7 +53,7 @@ export default function Home() {
                         },
                     }}
                 >
-                    <Image src={HiroIconColorBG} alt="Hiro's icon" width={200} style={{ borderRadius: '50%' }}></Image>
+                    <Image src={HiroIconColorBG} alt="Icon" width={200} style={{ borderRadius: '50%' }}></Image>
                 </Box>
                 {/* Main Contents */}
                 <Box
@@ -90,7 +90,7 @@ export default function Home() {
                         <br />
                         💼 System Engineer / Designer
                         <br />
-                        💬 eスポーツ業界でお仕事してます
+                        🔗 <Link href="/works">実績はこちらから</Link>
                     </Typography>
                     {/* SNS Link */}
                     <Box
