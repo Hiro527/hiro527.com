@@ -1,12 +1,12 @@
 {
-    "extensions.ignoreRecommendations": true,
-    "extensions.autoUpdate": false,
-    "extensions.autoCheckUpdates": false,
-    "extensions.showRecommendationsOnlyOnDemand": true,
-    "extensions.enabledApiProposals": {
-        "Google.gemini": true,
-        "biomejs.biome": true,
-        "github.copilot": false,
-        "esbenp.prettier-vscode": false
-    }
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports.biome": "explicit",
+        "source.organizeImports": false
+    },
+    "github.copilot.enable": {
+        "*": false,
+    },
+    "geminicodeassist.enable": true
 }
