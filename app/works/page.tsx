@@ -22,6 +22,7 @@ const getContents = async (page: number) => {
         queries: {
             limit: 10,
             filters: `env[contains]${process.env.ENV}`,
+            orders: "-date",
             offset: (page - 1) * 10,
         },
     })
