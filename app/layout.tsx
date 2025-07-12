@@ -1,42 +1,44 @@
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import { GoogleAnalytics } from '@next/third-parties/google';
-import type { Metadata } from 'next';
-import Script from 'next/script';
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter"
+import { GoogleAnalytics } from "@next/third-parties/google"
+import type { Metadata } from "next"
 
-import Copyright from '@/components/Copyright';
-import './globals.css';
+import Script from "next/script"
 
-export const runtime = 'edge';
+import Copyright from "@/components/Copyright"
+import "./globals.css"
+
+export const runtime = "edge"
 
 export const metadata: Metadata = {
-    title: 'hiro527.com',
-    description: 'About Hiro',
+    title: "hiro527.com",
+    description: "About Hiro",
     openGraph: {
-        url: 'https://hiro527.com',
-        type: 'website',
-        images: ['https://storage.hiro527.com/assets/hiro_icon_colorbg.png'],
+        url: "https://hiro527.com",
+        type: "website",
+        images: ["https://storage.hiro527.com/assets/hiro_icon_colorbg.png"],
     },
     twitter: {
-        card: 'summary',
-        site: '@hirx527',
-        creator: '@hirx527',
-        images: ['https://storage.hiro527.com/assets/hiro_icon_colorbg.png'],
+        card: "summary",
+        site: "@hirx527",
+        creator: "@hirx527",
+        images: ["https://storage.hiro527.com/assets/hiro_icon_colorbg.png"],
     },
-};
+}
 
 export default function RootLayout({
     children,
 }: Readonly<{
-    children: React.ReactNode;
+    children: React.ReactNode
 }>) {
     return (
         <html lang="ja">
             {/* Google Analytics */}
-            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ''} />
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
             <body>
                 {/* Adobe Fonts */}
                 <Script
                     id="AdobeFonts"
+                    // biome-ignore lint/security/noDangerouslySetInnerHtml: for adobe fonts
                     dangerouslySetInnerHTML={{
                         __html: `
                     (function(d) {
@@ -55,5 +57,5 @@ export default function RootLayout({
                 </AppRouterCacheProvider>
             </body>
         </html>
-    );
+    )
 }

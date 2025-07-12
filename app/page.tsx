@@ -1,43 +1,41 @@
-import EmailIcon from '@mui/icons-material/Email';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import XIcon from '@mui/icons-material/X';
-import { Box, IconButton, Link, Tooltip, Typography } from '@mui/material';
+import EmailIcon from "@mui/icons-material/Email"
+import GitHubIcon from "@mui/icons-material/GitHub"
+import XIcon from "@mui/icons-material/X"
+import { Box, IconButton, Link, Tooltip, Typography } from "@mui/material"
+import Image from "next/image"
+import HiroIconColorBG from "@/public/hiro_icon_colorbg.png"
 
-import Image from 'next/image';
-
-import HiroIconColorBG from '@/public/hiro_icon_colorbg.png';
-
-export const runtime = 'edge';
+export const runtime = "edge"
 
 export default function Home() {
     return (
         <Box
             sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                minHeight: '100vh',
-                width: '100vw',
-                overflowX: 'hidden',
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                minHeight: "100vh",
+                width: "100vw",
+                overflowX: "hidden",
             }}
         >
             <Box
                 sx={{
-                    display: 'flex',
+                    display: "flex",
                     flexDirection: {
-                        xs: 'column',
-                        md: 'row',
+                        xs: "column",
+                        md: "row",
                     },
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    maxWidth: 'md',
-                    width: '100%',
+                    alignItems: "center",
+                    justifyContent: "center",
+                    maxWidth: "md",
+                    width: "100%",
                     padding: {
                         xs: 2,
                         md: 0,
                     },
-                    boxSizing: 'border-box',
+                    boxSizing: "border-box",
                 }}
             >
                 {/* Icon */}
@@ -53,49 +51,58 @@ export default function Home() {
                         },
                     }}
                 >
-                    <Image src={HiroIconColorBG} alt="Icon" width={200} style={{ borderRadius: '50%' }}></Image>
+                    <Image
+                        src={HiroIconColorBG}
+                        alt="Icon"
+                        width={200}
+                        style={{ borderRadius: "50%" }}
+                    />
                 </Box>
                 {/* Main Contents */}
                 <Box
                     sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
+                        display: "flex",
+                        flexDirection: "column",
                         alignItems: {
-                            xs: 'center',
-                            md: 'flex-start',
+                            xs: "center",
+                            md: "flex-start",
                         },
                     }}
                 >
                     <Typography
                         sx={{
                             fontWeight: 600,
-                            fontSize: '30pt',
+                            fontSize: "30pt",
                         }}
                     >
                         Hiro
                     </Typography>
                     <Typography>
                         🎂 2004/05/27
-                        <br />
-                        📍 Tokyo
-                        <br />
-                        🏢{' '}
-                        <Link href="https://escl.co.jp" rel="noreferrer noopener" target="_blank">
+                        <br />📍 Tokyo
+                        <br />🏢{" "}
+                        <Link
+                            href="https://escl.co.jp"
+                            rel="noreferrer noopener"
+                            target="_blank"
+                        >
                             ESCL
                         </Link>
-                        {' / '}
-                        <Link href="https://unlimit.games" rel="noreferrer noopener" target="_blank">
+                        {" / "}
+                        <Link
+                            href="https://unlimit.games"
+                            rel="noreferrer noopener"
+                            target="_blank"
+                        >
                             FT UNLIMIT
                         </Link>
-                        <br />
-                        💼 System Engineer / Designer
-                        <br />
-                        🔗 <Link href="/works">実績はこちらから</Link>
+                        <br />💼 System Engineer / Designer
+                        <br />🔗 <Link href="/works">実績はこちらから</Link>
                     </Typography>
                     {/* SNS Link */}
                     <Box
                         sx={{
-                            display: 'flex',
+                            display: "flex",
                             my: 1,
                         }}
                     >
@@ -106,7 +113,7 @@ export default function Home() {
                                     mr: 1,
                                 }}
                             >
-                                <EmailIcon></EmailIcon>
+                                <EmailIcon />
                             </IconButton>
                         </Tooltip>
                         <Tooltip title="X">
@@ -118,17 +125,21 @@ export default function Home() {
                                     mr: 1,
                                 }}
                             >
-                                <XIcon></XIcon>
+                                <XIcon />
                             </IconButton>
                         </Tooltip>
                         <Tooltip title="GitHub">
-                            <IconButton href="https://github.com/Hiro527" rel="noreferrer noopener" target="_blank">
-                                <GitHubIcon></GitHubIcon>
+                            <IconButton
+                                href="https://github.com/Hiro527"
+                                rel="noreferrer noopener"
+                                target="_blank"
+                            >
+                                <GitHubIcon />
                             </IconButton>
                         </Tooltip>
                     </Box>
                 </Box>
             </Box>
         </Box>
-    );
+    )
 }

@@ -1,8 +1,4 @@
-
-'use client';
-
 import { Box, Typography } from '@mui/material';
-import React from 'react';
 
 export default function Copyright() {
     return (
@@ -15,8 +11,7 @@ export default function Copyright() {
             }}
         >
             <Typography variant="body2" color="text.secondary" align="right">
-                {'Copyright © '}
-                {new Date().getFullYear()}{' Hiro. All rights reserved.'}
+                Copyright © 2025 Hiro. All rights reserved.
             </Typography>
         </Box>
     );

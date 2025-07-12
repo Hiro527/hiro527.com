@@ -1,9 +1,10 @@
 {
-    "extensions.ignoreRecommendations": true,
-    "extensions.autoUpdate": false,
-    "extensions.autoCheckUpdates": false,
-    "biome.enabled": true,
-    "prettier.enable": false,
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports.biome": "explicit",
+        "source.organizeImports": false
+    },
     "github.copilot.enable": {
         "*": false,
     },
