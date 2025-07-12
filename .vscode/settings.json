@@ -3,7 +3,7 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.organizeImports.biome": "explicit",
-        "source.organizeImports": false
+        "source.organizeImports": "never"
     },
     "github.copilot.enable": {
         "*": false,
