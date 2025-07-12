@@ -37,8 +37,8 @@
             "!.next/",
             "!env.d.ts",
             "!**/.vercel",
-            "**/*.ts",
-            "**/*.tsx"
+            "app/**/*.ts",
+            "app/**/*.tsx"
         ]
     }
 }
