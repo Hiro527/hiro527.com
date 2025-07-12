@@ -1,5 +1,5 @@
 /** biome-ignore-all lint/style/noNonNullAssertion: To use env variables */
-import { createClient } from "microcms-js-sdk";
+import { createClient } from "microcms-js-sdk"
 
 export interface Content {
     id: string
@@ -16,9 +16,7 @@ export interface Content {
         width: number
     }
     content: string
-    env: [
-        'dev' | 'prod'
-    ]
+    env: ["dev" | "prod"]
     private: boolean
     info: string
 }
