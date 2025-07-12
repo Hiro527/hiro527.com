@@ -178,7 +178,9 @@ export default async function Home({ params }: Props) {
                     </Typography>
                     <div
                         // biome-ignore lint/security/noDangerouslySetInnerHtml: microCMS側でHTMLを吐き出してくれるため
-                        dangerouslySetInnerHTML={{ __html: content.content }}
+                        dangerouslySetInnerHTML={{
+                            __html: content.content || "",
+                        }}
                     />
                 </Box>
             </Box>

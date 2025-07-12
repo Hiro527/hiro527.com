@@ -15,7 +15,7 @@ export interface Content {
         height: number
         width: number
     }
-    content: string
+    content?: string
     env: ["dev" | "prod"]
     private: boolean
     info: string
