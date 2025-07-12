@@ -34,6 +34,9 @@ export default function ContentCard({ content }: Props) {
                         gutterBottom
                         sx={{
                             fontSize: "12pt",
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap'
                         }}
                     >
                         {content.title}
