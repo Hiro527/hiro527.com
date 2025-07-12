@@ -21,7 +21,10 @@ export default function ContentCard({ content }: Props) {
     return (
         <Card
             sx={{
-                width: 480,
+                width: {
+                    xs: '100%',
+                    md: 480
+                },
                 ":hover": {
                     boxShadow: 5,
                 },

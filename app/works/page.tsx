@@ -48,7 +48,7 @@ export default async function Home({ searchParams }: Props) {
                 flexDirection: "column",
                 alignItems: "center",
                 minHeight: "100vh",
-                width: "100vw",
+                width: "100%",
                 overflowX: "hidden",
             }}
         >
@@ -70,7 +70,7 @@ export default async function Home({ searchParams }: Props) {
                 >
                     <Link
                         href={"/"}
-                        style={{
+                        sx={{
                             position: "absolute",
                             left: 0,
                         }}
@@ -89,7 +89,7 @@ export default async function Home({ searchParams }: Props) {
                                     fontSize: "14pt",
                                 }}
                             />
-                            <Typography>トップページへ戻る</Typography>
+                            <Typography>HOME</Typography>
                         </Box>
                     </Link>
                     <Box>
@@ -107,8 +107,16 @@ export default async function Home({ searchParams }: Props) {
                 <Box
                     sx={{
                         display: "flex",
-                        flexWrap: "wrap",
+                        flexWrap: {
+                            xs: "nowrap",
+                            md: "wrap",
+                        },
+                        flexDirection: {
+                            xs: "column",
+                            md: "row",
+                        },
                         justifyContent: "center",
+                        alignItems: "center",
                         width: "100%",
                         gap: 3,
                     }}

@@ -107,7 +107,7 @@ export default async function Home({ params }: Props) {
                                     fontSize: "14pt",
                                 }}
                             />
-                            <Typography>実績一覧へ戻る</Typography>
+                            <Typography>一覧へ戻る</Typography>
                         </Box>
                     </Link>
                     <Box
