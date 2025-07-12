@@ -8,7 +8,8 @@ html {
     visibility: hidden;
     width: 100svw;
     min-height: 100svh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 html.wf-active {

@@ -2,6 +2,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"
 import { Box, Link, Typography } from "@mui/material"
 import type { Metadata } from "next"
 import ContentCard from "@/components/ContentCard"
+import CustomPagination from "@/components/CustomPagination"
 import { type Content, client } from "@/lib/microcms"
 
 export const metadata: Metadata = {
@@ -9,22 +10,36 @@ export const metadata: Metadata = {
     description: "実績の一覧です",
 }
 
-const getContents = async () => {
+type Props = {
+    searchParams: Promise<{
+        page?: string
+    }>
+}
+
+const getContents = async (page: number) => {
     const res = await client.getList({
         endpoint: "works",
         queries: {
             limit: 10,
             filters: `env[contains]${process.env.ENV}`,
+            orders: "-date",
+            offset: (page - 1) * 10,
         },
     })
 
-    const contents = res.contents as Content[]
-
-    return contents
+    return res
 }
 
-export default async function Home() {
-    const contents = await getContents()
+export default async function Home({ searchParams }: Props) {
+    const { page } = await searchParams
+
+    const {
+        totalCount,
+        contents,
+    }: {
+        totalCount: number
+        contents: Content[]
+    } = await getContents(Number.parseInt(page || "1"))
 
     return (
         <Box
@@ -104,6 +119,10 @@ export default async function Home() {
                         )
                     })}
                 </Box>
+                <CustomPagination
+                    page={Number.parseInt(page || "1")}
+                    totalCount={totalCount}
+                />
             </Box>
         </Box>
     )
