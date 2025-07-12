@@ -8,6 +8,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { type Content, client } from "@/lib/microcms"
+import timezone from 'dayjs/plugin/timezone';
 
 type Props = {
     params: Promise<{
@@ -62,6 +63,9 @@ export default async function Home({ params }: Props) {
     if (!content) {
         notFound()
     }
+
+    dayjs.extend(timezone);
+    dayjs.tz.setDefault('Asia/Tokyo');
 
     const contentDate = dayjs(content.date)
 
