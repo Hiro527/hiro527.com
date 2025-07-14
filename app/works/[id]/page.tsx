@@ -24,15 +24,14 @@ const getContent = async (id: string) => {
                 limit: 1,
                 filters: `env[contains]${process.env.ENV}[and]id[equals]${id}`,
             },
+            customRequestInit: {
+                cache: "no-store",
+            },
         })
 
         const contents = res.contents as Content[]
 
-        const filtered = contents.filter((content) =>
-            content.env.includes(process.env.ENV as "dev" | "prod"),
-        )
-
-        return filtered[0]
+        return contents[0]
     } catch (error) {
         // 404エラー時はNotFoundを表示する
         if (error instanceof Error && error.message.includes("404")) {

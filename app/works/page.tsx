@@ -25,6 +25,9 @@ const getContents = async (page: number) => {
             orders: "-date",
             offset: (page - 1) * 10,
         },
+        customRequestInit: {
+            cache: 'no-store'
+        }
     })
 
     return res
