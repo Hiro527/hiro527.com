@@ -7,8 +7,6 @@ import Script from "next/script"
 import Copyright from "@/components/Copyright"
 import "./globals.css"
 
-export const runtime = "edge"
-
 export const metadata: Metadata = {
     title: "hiro527.com",
     description: "About Hiro",
