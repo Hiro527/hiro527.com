@@ -11,7 +11,10 @@
         "lint:lint": "biome lint --error-on-warnings .",
         "lint:check": "biome check --error-on-warnings .",
         "fix:format": "biome format --write .",
-        "fix:lint": "biome lint --write ."
+        "fix:lint": "biome lint --write .",
+        "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+        "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+        "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
     },
     "dependencies": {
         "@emotion/cache": "^11.11.0",
@@ -21,6 +24,7 @@
         "@mui/material": "^5.15.18",
         "@mui/material-nextjs": "^5.15.11",
         "@next/third-parties": "^14.3.0-canary.73",
+        "@opennextjs/cloudflare": "^1.5.1",
         "dayjs": "^1.11.13",
         "microcms-js-sdk": "^3.2.0",
         "next": "14.2.3",
@@ -30,14 +34,15 @@
     },
     "devDependencies": {
         "@biomejs/biome": "^2.1.1",
-        "@cloudflare/next-on-pages": "^1.11.3",
         "@types/node": "^20",
         "@types/react": "^18",
         "@types/react-dom": "^18",
+        "esbuild": "^0.25.6",
         "eslint": "^8",
         "eslint-config-next": "14.2.3",
         "lefthook": "^1.11.14",
         "prettier": "^3.2.5",
-        "typescript": "^5"
+        "typescript": "^5",
+        "wrangler": "^4.24.3"
     }
 }

@@ -5,8 +5,6 @@ import { Box, IconButton, Link, Tooltip, Typography } from "@mui/material"
 import Image from "next/image"
 import HiroIconColorBG from "@/public/hiro_icon_colorbg.png"
 
-export const runtime = "edge"
-
 export default function Home() {
     return (
         <Box
