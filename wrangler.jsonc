@@ -1,7 +1,7 @@
 {
     "$schema": "node_modules/wrangler/config-schema.json",
     "main": ".open-next/worker.js",
-    "name": "hro527-com",
+    "name": "hiro527-com",
     "compatibility_date": "2025-07-14",
     "compatibility_flags": [
         "nodejs_compat"
