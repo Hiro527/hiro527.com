@@ -1,5 +1,3 @@
-"use client"
-
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth"
 import {
     Card,
@@ -8,6 +6,7 @@ import {
     CardMedia,
     Typography,
 } from "@mui/material"
+import timezone from "dayjs/plugin/timezone"
 import dayjs from "dayjs"
 import type { Content } from "@/lib/microcms"
 
@@ -16,6 +15,9 @@ type Props = {
 }
 
 export default function ContentCard({ content }: Props) {
+    dayjs.extend(timezone)
+    dayjs.tz.setDefault("Asia/Tokyo")
+
     const contentDate = dayjs(content.date)
 
     return (
@@ -50,16 +52,12 @@ export default function ContentCard({ content }: Props) {
                             fontSize: "11pt",
                         }}
                     >
-                        <CalendarMonthIcon
-                            sx={{
-                                verticalAlign: "-3px",
-                                mr: 0.5,
-                                fontSize: "14pt",
-                            }}
-                        />
                         {content.private
                             ? contentDate.format("YYYY/MM")
-                            : contentDate.format("YYYY/MM/DD")}
+                            : contentDate.format("YYYY/MM/DD")}{' - '}
+                        {
+                            content.private ? '非公開' : content.client_name
+                        }
                     </Typography>
                 </CardContent>
             </CardActionArea>
