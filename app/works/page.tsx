@@ -26,8 +26,8 @@ const getContents = async (page: number) => {
             offset: (page - 1) * 10,
         },
         customRequestInit: {
-            cache: 'no-store'
-        }
+            cache: "no-store",
+        },
     })
 
     return res
