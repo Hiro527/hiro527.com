@@ -146,8 +146,8 @@ export default async function Home({ params }: Props) {
                             }}
                         />
                         {content.private
-                            ? contentDate.format("YYYY/MM")
-                            : contentDate.format("YYYY/MM/DD")}
+                            ? contentDate.tz().format("YYYY/MM")
+                            : contentDate.tz().format("YYYY/MM/DD")}
                     </Typography>
                     <Typography
                         sx={{

@@ -52,8 +52,8 @@ export default function ContentCard({ content }: Props) {
                         }}
                     >
                         {content.private
-                            ? contentDate.format("YYYY/MM")
-                            : contentDate.format("YYYY/MM/DD")}{' - '}
+                            ? contentDate.tz().format("YYYY/MM")
+                            : contentDate.tz().format("YYYY/MM/DD")}{' - '}
                         {
                             content.private ? '非公開' : content.client_name
                         }
