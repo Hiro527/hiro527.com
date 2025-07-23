@@ -6,6 +6,7 @@ import {
     Typography,
 } from "@mui/material"
 import timezone from "dayjs/plugin/timezone"
+import utc from 'dayjs/plugin/utc'
 import dayjs from "dayjs"
 import type { Content } from "@/lib/microcms"
 
@@ -14,6 +15,7 @@ type Props = {
 }
 
 export default function ContentCard({ content }: Props) {
+    dayjs.extend(utc)
     dayjs.extend(timezone)
     dayjs.tz.setDefault("Asia/Tokyo")
 

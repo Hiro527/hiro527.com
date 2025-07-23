@@ -5,6 +5,7 @@ import InfoIcon from "@mui/icons-material/Info"
 import { Box, Link, Typography } from "@mui/material"
 import dayjs from "dayjs"
 import timezone from "dayjs/plugin/timezone"
+import utc from "dayjs/plugin/utc"
 import type { Metadata } from "next"
 import Image from "next/image"
 import { notFound } from "next/navigation"
@@ -63,6 +64,7 @@ export default async function Home({ params }: Props) {
         notFound()
     }
 
+    dayjs.extend(utc)
     dayjs.extend(timezone)
     dayjs.tz.setDefault("Asia/Tokyo")
 
