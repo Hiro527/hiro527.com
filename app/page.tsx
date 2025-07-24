@@ -106,7 +106,7 @@ export default function Home() {
                     >
                         <Tooltip title="Email">
                             <IconButton
-                                href="mailto:contact@unlimit.games"
+                                href="mailto:nakajima@unlimit.games"
                                 sx={{
                                     mr: 1,
                                 }}
