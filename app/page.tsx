@@ -80,19 +80,11 @@ export default function Home() {
                         <br />📍 Tokyo
                         <br />🏢{" "}
                         <Link
-                            href="https://escl.co.jp"
-                            rel="noreferrer noopener"
-                            target="_blank"
-                        >
-                            ESCL
-                        </Link>
-                        {" / "}
-                        <Link
                             href="https://unlimit.games"
                             rel="noreferrer noopener"
                             target="_blank"
                         >
-                            FT UNLIMIT
+                            株式会社 FT UNLIMIT
                         </Link>
                         <br />💼 System Engineer / Designer
                         <br />🔗 <Link href="/works">実績はこちらから</Link>
