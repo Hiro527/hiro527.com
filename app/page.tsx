@@ -2,8 +2,7 @@ import EmailIcon from "@mui/icons-material/Email"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import XIcon from "@mui/icons-material/X"
 import { Box, IconButton, Link, Tooltip, Typography } from "@mui/material"
-import Image from "next/image"
-import HiroIconColorBG from "@/public/hiro_icon_colorbg.png"
+import { IconContainer } from "@/components/IconContainer"
 
 export default function Home() {
     return (
@@ -37,25 +36,7 @@ export default function Home() {
                 }}
             >
                 {/* Icon */}
-                <Box
-                    sx={{
-                        marginRight: {
-                            xs: 0,
-                            md: 5,
-                        },
-                        marginBottom: {
-                            xs: 2,
-                            md: 0,
-                        },
-                    }}
-                >
-                    <Image
-                        src={HiroIconColorBG}
-                        alt="Icon"
-                        width={200}
-                        style={{ borderRadius: "50%" }}
-                    />
-                </Box>
+                <IconContainer />
                 {/* Main Contents */}
                 <Box
                     sx={{
@@ -77,7 +58,7 @@ export default function Home() {
                     </Typography>
                     <Typography>
                         🎂 2004/05/27
-                        <br />📍 Tokyo
+                        <br />📍 東京
                         <br />🏢{" "}
                         <Link
                             href="https://unlimit.games"
@@ -86,7 +67,7 @@ export default function Home() {
                         >
                             株式会社 FT UNLIMIT
                         </Link>
-                        <br />💼 System Engineer / Designer
+                        <br />💼 エンジニア / イベント・配信制作/技術
                         <br />🔗 <Link href="/works">実績はこちらから</Link>
                     </Typography>
                     {/* SNS Link */}
