@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     openGraph: {
         url: "https://hiro527.com",
         type: "website",
-        images: ["https://storage.hiro527.com/assets/hiro_icon_colorbg.png"],
+        images: ["https://storage.hiro527.com/assets/hiro_icon.png"],
     },
     twitter: {
         card: "summary",
         site: "@hirx527",
         creator: "@hirx527",
-        images: ["https://storage.hiro527.com/assets/hiro_icon_colorbg.png"],
+        images: ["https://storage.hiro527.com/assets/hiro_icon.png"],
     },
 }
 
