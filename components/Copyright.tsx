@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material"
 
 export default function Copyright() {
+    const currentYear = new Date().getFullYear()
     return (
         <Box
             sx={{
@@ -11,7 +12,7 @@ export default function Copyright() {
             }}
         >
             <Typography variant="body2" color="text.secondary" align="right">
-                Copyright © 2025 Hiro. All rights reserved.
+                Copyright © {currentYear} Hiro.
             </Typography>
         </Box>
     )
