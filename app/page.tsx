@@ -61,11 +61,11 @@ export default function Home() {
                         <br />📍 東京
                         <br />🏢{" "}
                         <Link
-                            href="https://unlimit.games"
+                            href="https://tieclan.co.jp"
                             rel="noreferrer noopener"
                             target="_blank"
                         >
-                            株式会社 FT UNLIMIT
+                            株式会社TIECLAN
                         </Link>
                         <br />💼 エンジニア / イベント・配信制作/技術
                         <br />🔗 <Link href="/works">実績はこちらから</Link>
